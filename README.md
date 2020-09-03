@@ -9,7 +9,13 @@ The module challenge is the afternoon project or assignment that students work t
 ## Objectives
 
 - Explain function scope
+Answer:
+Each function creates a new scope. Scope determines the accessibility (visibility) of these variables. Variables defined inside a function are not accessible (visible) from outside the function.
+
 - Describe what closure is, how closure is created in a program and why it is important to understand closures in JavaScript  
+Answer:
+A closure is a function that remembers its outer variables and can access them.
+It provides better control over the code when using them.
 
 ## Introduction
 
