@@ -72,7 +72,7 @@ Write a function called `inning` that returns a random number of points that a t
 
 function inning(){
 
-  return Math.floor(Math.round()*3)
+  return Math.floor(Math.random()*3);
 
 }
 inning();
@@ -90,11 +90,19 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(inning, numinnging){
 
-  /*Code Here*/
-
+  const obj = {
+    Home: 0,
+    Away: 0
+  }
+  for(let i=0; i<numinnging; i++){
+    obj.Home +=inning;
+    obj.Away +=inning
+  }
+  return obj;
 }
+console.log(finalScore(inning, 9));
 
 /* Task 4: 
 
@@ -117,8 +125,38 @@ and returns the score at each pont in the game, like so:
 Final Score: awayTeam - homeTeam */
 
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(inning, numinnging) {
+  obj = {
+    Home: 0,
+    Away: 0,
+  }
+  const printObj = inningNumber =>{
+    if(inningNumber==0){
+      var string = "1st";
+    }
+    else if(inningNumber == 1){
+      var string = "2nd";
+    }
+    else if(inningNumber == 2){
+      var string = "3rd";
+    }
+    else{
+      var string = (inningNumber) + "th"
+    }
+    for (let i=0; i < numinnging; i++){
+
+    }
+    console.log(string, 'inning:  ',obj.Home, '--',obj.Away);
+  }
+  for(let i=0;i<numinnging; i++){
+    obj.Home += inning();
+    obj.Away +=inning();
+    printObj(i);
+    
+  }
+  console.log()
+  console.log('Final Score:  ',obj.Home, '--',obj.Away);
 }
+scoreboard(inning,9)
 
 
